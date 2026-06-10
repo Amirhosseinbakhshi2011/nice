@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تسویه حساب — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="loading-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="cart.html">سبد خرید</a></li>
+          <li><a href="checkout.html" class="active">تسویه</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>تسویه حساب</h1>
+    <form id="checkout-form" class="checkout-form">
+      <div class="two-col">
+        <div>
+          <label>نام و نام خانوادگی<input type="text" id="cust-name" required></label>
+          <label>تلفن همراه<input type="tel" id="cust-phone" required></label>
+          <label>آدرس کامل<textarea id="cust-address" required></textarea></label>
+          <label>روش ارسال:
+            <select id="shipping-method">
+              <option value="standard" data-days="5" data-cost="20000">پست سفارشی — ۵ روز — ۲۰,۰۰۰ تومان</option>
+              <option value="express" data-days="2" data-cost="40000">ارسال سریع — ۲ روز — ۴۰,۰۰۰ تومان</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <h3>جمع هزینه</h3>
+          <p>مجموع سفارش: <span id="checkout-subtotal">۰ تومان</span></p>
+          <p>هزینه ارسال: <span id="checkout-shipping">۰ تومان</span></p>
+          <p>مبلغ قابل پرداخت: <strong id="checkout-total">۰ تومان</strong></p>
+
+          <label>درگاه پرداخت:
+            <select id="payment-gateway">
+              <option value="mock">درگاه آزمایشی (پرداخت شبیه‌سازی‌شده)</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn primary">پرداخت و ثبت سفارش</button>
+        </div>
+      </div>
+    </form>
+
+
+    <section id="sales-report">
+      <h2>گزارش فروش</h2>
+      <table id="sales-table">
+        <thead>
+          <tr>
+            <th>تاریخ</th>
+            <th>محصول</th>
+            <th>تعداد فروش</th>
+            <th>مجموع فروش</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-11-28</td>
+            <td>گلدان سفالی</td>
+            <td>50</td>
+            <td>500,000 تومان</td>
+          </tr>
+          <tr>
+            <td>2025-11-27</td>
+            <td>قاب عکس چوبی</td>
+            <td>30</td>
+            <td>300,000 تومان</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="download-report" class="btn primary">دانلود گزارش به فرمت Excel</button>
+    </section>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+</body>
+</html>
+

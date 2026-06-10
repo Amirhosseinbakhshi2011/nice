@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فروشگاه — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="loading-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a class="active" href="shop.html">فروشگاه</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس</a></li>
+          <li><a href="cart.html">سبد خرید (<span id="cart-count-2">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="shop-header">
+      <h1>فروشگاه</h1>
+      <div class="filters">
+        <label>جستجو: <input id="search-input" placeholder="نام محصول..." /></label>
+        <label>دسته:
+          <select id="cat-filter">
+            <option value="">همه</option>
+            <option>سرامیک</option>
+            <option>منسوجات</option>
+            <option>چرم</option>
+          </select>
+        </label>
+        <label>مرتب‌سازی:
+          <select id="sort-filter">
+            <option value="default">پیش‌فرض</option>
+            <option value="price-asc">قیمت ↑</option>
+            <option value="price-desc">قیمت ↓</option>
+          </select>
+        </label>
+      </div>
+    </section>
+	<!-- محصولات پرفروش -->
+<section class="section-products">
+  <h2>محصولات پرفروش</h2>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best1.jpg" alt="گلدان طرح مینیمال">
+      </div>
+      <h4>گلدان طرح مینیمال</h4>
+      <p class="price">۳۲۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best1" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best1">افزودن</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best2.jpg" alt="کاسه سفالی نقش برجسته">
+      </div>
+      <h4>کاسه سفالی نقش برجسته</h4>
+      <p class="price">۱۸۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best2" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best2">افزودن</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best3.jpg" alt="کیف چرمی دست‌دوز">
+      </div>
+      <h4>کیف چرمی دست‌دوز</h4>
+      <p class="price">۶۵۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best3" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best3">افزودن</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <section id="product-list" class="products-grid">
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+
+</body>
+</html>

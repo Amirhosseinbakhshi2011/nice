@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>جزئیات محصول — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="loading-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس</a></li>
+          <li><a href="cart.html">سبد خرید (<span id="cart-count-3">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="product-section" class="product-page">
+      <!-- چپ: تصاویر -->
+      <div class="product-gallery">
+        <div class="main-img">
+          <img id="main-product-img" src="images/p1.jpg" alt="">
+        </div>
+        <div id="thumbs" class="thumbs">
+          <!-- thumbnail ها با JS پر می‌شود -->
+        </div>
+      </div>
+
+      <!-- راست: اطلاعات -->
+      <div class="product-info">
+        <h1 id="product-title">عنوان محصول</h1>
+        <p id="product-desc">توضیحات کوتاه محصول در اینجا نمایش داده می‌شود.</p>
+        <div class="meta">
+          <p class="price" id="product-price">۱۲۳,۴۵۶ تومان</p>
+        </div>
+
+        <!-- انتخاب متغیرها -->
+        <div class="variants">
+          <label>رنگ:
+            <select id="variant-color"></select>
+          </label>
+          <label>اندازه:
+            <select id="variant-size"></select>
+          </label>
+        </div>
+
+        <!-- جدول مشخصات -->
+        <table class="specs" id="specs-table">
+          <!-- با JS پر می‌شود -->
+        </table>
+
+        <!-- نرخ و نظر -->
+        <div class="rating-box">
+          <div id="rating-stars"></div>
+          <textarea id="review-text" placeholder="نظر خود را بنویسید..."></textarea>
+          <button id="add-review" class="btn">ثبت نظر</button>
+          <div id="reviews-list"></div>
+        </div>
+
+        <div class="product-actions">
+          <button id="add-to-cart-btn" class="btn primary">افزودن به سبد خرید</button>
+          <a href="checkout.html" class="btn">خرید سریع</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+</body>
+</html>

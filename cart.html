@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>سبد خرید — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="loading-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="cart.html" class="active">سبد خرید</a></li>
+          <li><a href="checkout.html">تسویه</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>سبد خرید شما</h1>
+    <section id="cart-section" class="cart-section">
+      <table class="cart-table">
+        <thead>
+          <tr><th>محصول</th><th>قیمت</th><th>تعداد</th><th>جمع</th><th></th></tr>
+        </thead>
+        <tbody id="cart-body">
+
+        </tbody>
+      </table>
+
+      <div class="cart-summary">
+        <p>مجموع: <span id="cart-total">۰ تومان</span></p>
+        <div class="cart-actions">
+          <a href="shop.html" class="btn">ادامه خرید</a>
+          <a href="checkout.html" class="btn primary">تسویه حساب</a>
+          <button id="export-sales" class="btn">خروجی گزارش (CSV)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+</body>
+</html>

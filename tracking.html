@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>پیگیری سفارش — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="loading-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="tracking.html" class="active">پیگیری سفارش</a></li>
+          <li><a href="contact.html">تماس</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-box">
+    <h1>پیگیری سفارش</h1>
+    <form id="track-form">
+      <label>کد پیگیری (order id)<input id="track-id" required></label>
+      <button class="btn">پیگیری</button>
+    </form>
+
+    <div id="track-result" style="margin-top:20px;"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+</body>
+</html>

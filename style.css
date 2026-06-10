@@ -1,0 +1,136 @@
+/* ---------- VARIABLE COLORS ---------- */
+:root{
+  --brown-dark:#3b2b22;
+  --brown-medium:#7a553f;
+  --gold:#d4a64a;
+  --cream:#e3deab;
+  --accent:#a67c3b;
+  --muted:#7b6a62;
+  --card:#fff7f0;
+  --shadow: rgba(0,0,0,0.12);
+}
+
+/* ---------- BASE ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Vazirmatn", "Yekan", Tahoma, Arial, sans-serif;
+  background:var(--cream);
+  color:var(--brown-dark);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ---------- CONTAINER ---------- */
+.container{max-width:1150px;margin:0 auto;padding:20px}
+
+/* ---------- LOADING ROOT ---------- */
+#loading-root{position:fixed;inset:0;background:rgba(12,8,6,0.85);z-index:99999;display:flex;align-items:center;justify-content:center}
+/* 3D wooden cube loader */
+.loader-cube{
+  width:90px;height:90px;position:relative;transform-style:preserve-3d;animation:rotateCube 2.4s infinite linear;
+}
+/* Faces */
+.loader-cube .face{
+  position:absolute;width:90px;height:90px;background:linear-gradient(180deg,var(--brown-medium),var(--brown-dark));
+  border:4px solid var(--gold);box-shadow:0 6px 18px var(--shadow);
+  display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:bold;font-size:14px;
+}
+.loader-cube .f1{transform:translateZ(45px)}
+.loader-cube .f2{transform:rotateY(90deg) translateZ(45px)}
+.loader-cube .f3{transform:rotateY(180deg) translateZ(45px)}
+.loader-cube .f4{transform:rotateY(-90deg) translateZ(45px)}
+.loader-cube .f5{transform:rotateX(90deg) translateZ(45px)}
+.loader-cube .f6{transform:rotateX(-90deg) translateZ(45px)}
+@keyframes rotateCube{0%{transform:rotateX(10deg) rotateY(0)}50%{transform:rotateX(370deg) rotateY(180deg)}100%{transform:rotateX(10deg) rotateY(360deg)}}
+
+/* hide when loaded */
+body.loaded #loading-root{opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+
+/* ---------- HEADER ---------- */
+.site-header{background:linear-gradient(90deg,var(--brown-dark),#2f2219);color:var(--gold);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{font-weight:700;color:var(--gold);text-decoration:none;font-size:20px}
+#main-nav ul{list-style:none;display:flex;gap:10px;align-items:center;margin:0}
+#main-nav a{color:var(--gold);text-decoration:none;padding:8px 12px;border-radius:6px}
+#main-nav a.active, #main-nav a:hover{background:rgba(212,166,74,0.12);color:#ffffff}
+#mobile-toggle{display:none;background:transparent;border:none;color:var(--gold);font-size:22px}
+
+/* ---------- HERO ---------- */
+.rustic-hero{background-image:url('images/hero-wood.jpg');background-size:cover;background-position:center;padding:90px 20px;color:var(--cream);text-align:center}
+.hero-inner h1{font-size:36px;margin-bottom:8px;text-shadow:0 3px 12px rgba(0,0,0,0.4)}
+.hero-inner p{opacity:.95;margin-bottom:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:var(--brown-dark);background:var(--card);border:1px solid rgba(0,0,0,0.05)}
+.btn.primary{background:var(--gold);color:var(--brown-dark);font-weight:700}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(255,255,255,0.15)}
+.btn.sm{padding:6px 10px;font-size:13px}
+.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+
+/* ---------- FEATURES ---------- */
+.features{display:flex;gap:20px;justify-content:space-between;margin:30px 0}
+.features article{background:linear-gradient(180deg,var(--card),#fff);padding:18px;border-radius:10px;flex:1;box-shadow:0 6px 18px var(--shadow)}
+
+/* ---------- PRODUCTS GRID ---------- */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.product-card{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px var(--shadow);display:flex;flex-direction:column}
+.product-card .thumb{height:200px;overflow:hidden}
+.product-card img{width:100%;height:100%;object-fit:cover;display:block}
+.product-card h4{padding:12px 16px;margin:0;font-size:18px}
+.product-card .price{padding:0 16px;color:var(--accent);font-weight:700}
+.card-actions{margin-top:auto;padding:12px 16px;display:flex;gap:8px}
+
+/* ---------- PRODUCT PAGE ---------- */
+.product-page{display:flex;gap:30px;padding:40px 0;align-items:flex-start}
+.product-gallery{flex:1}
+.product-gallery .main-img{background:var(--card);border-radius:10px;padding:10px;box-shadow:0 6px 18px var(--shadow)}
+.product-gallery img{width:100%;height:420px;object-fit:cover;border-radius:6px}
+.thumbs{display:flex;gap:8px;margin-top:10px}
+.thumbs img{width:70px;height:70px;object-fit:cover;border-radius:6px;cursor:pointer;border:3px solid transparent}
+.thumbs img.active{border-color:var(--gold)}
+.product-info{flex:1.1;background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px var(--shadow)}
+.product-info h1{margin-top:0}
+.meta .price{font-size:22px;color:var(--accent);font-weight:800}
+
+/* variants & specs */
+.variants{display:flex;gap:12px;margin-top:12px}
+.specs{width:100%;border-collapse:collapse;margin-top:14px}
+.specs td{padding:8px;border-bottom:1px solid rgba(0,0,0,0.06)}
+
+/* reviews */
+.rating-box{margin-top:16px}
+#reviews-list{margin-top:10px;border-top:1px dashed rgba(0,0,0,0.06);padding-top:10px}
+
+/* ---------- CART ---------- */
+.cart-section{display:flex;gap:40px;flex-direction:column}
+.cart-table{width:100%;border-collapse:collapse}
+.cart-table th,.cart-table td{padding:12px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:right}
+.cart-summary{margin-top:20px;display:flex;justify-content:space-between;align-items:center}
+
+/* ---------- FORMS ---------- */
+label{display:block;margin-bottom:10px}
+input[type="text"],input[type="email"],input[type="tel"],textarea,select{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #e6ded6;background:#fff;
+}
+textarea{min-height:100px;resize:vertical}
+
+/* ---------- FOOTER ---------- */
+.site-footer{background:linear-gradient(90deg,var(--brown-dark),#2f2219);color:var(--gold);padding:24px 0;margin-top:30px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .product-page{flex-direction:column}
+  #mobile-toggle{display:block}
+  #main-nav{position:absolute;top:64px;left:0;right:0;background:var(--brown-dark);display:none}
+  #main-nav.open{display:block}
+  .header-inner{gap:8px}
+  .features{flex-direction:column}
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* small tweaks */
+.small-muted{color:var(--muted);font-size:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:900px){.two-col{grid-template-columns:1fr}}

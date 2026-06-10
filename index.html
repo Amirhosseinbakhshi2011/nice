@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>خانه — بازار صنایع دستی</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="3d-loader.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="loading-root" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">بازار صنایع دستی</a>
+      <button id="mobile-toggle" aria-label="باز/بسته کردن منو">☰</button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="rules.html">قوانین</a></li>
+          <li><a href="contact.html">تماس</a></li>
+          <li><a href="tracking.html">پیگیری سفارش</a></li>
+          <li><a href="cart.html" class="cart-link">سبد خرید (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero rustic-hero">
+      <div class="container hero-inner">
+        <h1>آثار دست‌ساز روستا؛ هر قطعه یک قصه</h1>
+        <p>محصولات محلیِ منتخب؛ کیفیتِ دستی، اصالتِ ایرانی.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="shop.html">مشاهده فروشگاه</a>
+          <a class="btn ghost" href="about.html">درباره ما</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="features container">
+      <article>
+        <h3>گالری حرفه‌ای</h3>
+        <p>تصاویر چندگانه برای هر محصول با زوم و گالری.</p>
+      </article>
+      <article>
+        <h3>گزینه‌های ارسال</h3>
+        <p>زمان تحویل مشخص شده، هزینه طبق روش ارسال.</p>
+      </article>
+      <article>
+        <h3>پیگیری سفارش</h3>
+        <p>کد پیگیری و وضعیت سفارش در صفحهٔ مجزا.</p>
+      </article>
+    </section>
+    <section class="container section-products">
+      <h3>
+        محصولات منتخب
+      </h3>
+
+      <section class="container section-products">
+        <h2>محصولات منتخب</h2>
+        <div id="featured-products" class="products-grid">
+          <!-- کارت‌ها با JS یا دستی اضافه شوند -->
+          <article class="product-card" data-id="p1">
+            <div class="thumb">
+              <img src="images/p1.jpg" alt="گلدان سفالی دست‌ساز">
+            </div>
+            <h4>گلدان سفالی دست‌ساز</h4>
+            <p class="price">۲۴۰,۰۰۰ تومان</p>
+            <div class="card-actions">
+              <a href="product.html?id=p1" class="btn sm">مشاهده</a>
+              <button class="btn sm outline add-to-cart" data-id="p1">افزودن</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="p2">
+            <div class="thumb">
+              <img src="images/p2.jpg" alt="تابلو نقاشی محلی">
+            </div>
+            <h4>تابلو نقاشی محلی</h4>
+            <p class="price">۴۸۰,۰۰۰ تومان</p>
+            <div class="card-actions">
+              <a href="product.html?id=p2" class="btn sm">مشاهده</a>
+              <button class="btn sm outline add-to-cart" data-id="p2">افزودن</button>
+            </div>
+          </article>
+    <article class="product-card" data-id="p3">
+      <div class="thumb">
+        <img src="#" alt="" srcset="">
+      </div>
+      <h2>
+        کیف
+      </h2>
+      <p class="price">
+        50000$
+      </p>
+      <div class="card-action">
+        <a href="product.html?id=p3" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="p3">افزودن</button>
+      </div>
+        </article>
+        </div>
+      </section>
+<section class="container section-products">
+  <h2>محصولات پرفروش</h2>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best1.jpg" alt="گلدان طرح مینیمال">
+      </div>
+      <h4>گلدان طرح مینیمال</h4>
+      <p class="price">۳۲۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best1" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best1">افزودن</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best2.jpg" alt="کاسه سفالی نقش برجسته">
+      </div>
+      <h4>کاسه سفالی نقش برجسته</h4>
+      <p class="price">۱۸۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best2" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best2">افزودن</button>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="thumb">
+        <img src="images/best3.jpg" alt="کیف چرمی دست‌دوز">
+      </div>
+      <h4>کیف چرمی دست‌دوز</h4>
+      <p class="price">۶۵۰,۰۰۰ تومان</p>
+      <div class="card-actions">
+        <a href="product.html?id=best3" class="btn sm">مشاهده</a>
+        <button class="btn sm outline add-to-cart" data-id="best3">افزودن</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <section class="container rustic-intro">
+      <div class="two-col">
+        <div>
+          <h3>هر قطعه یک روایت</h3>
+          <p>مواد محلی، تکنیک‌ دستی، و طراحی‌هایی که ریشه در فرهنگ روستایی دارد.</p>
+          <a class="btn" href="about.html">بیشتر بدانید</a>
+        </div>
+        <div>
+          <img src="images/workshop.jpg" alt="کارگاه صنایع دستی">
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>بازار صنایع دستی</h4>
+          <p>اصالت، کیفیت، روایت.</p>
+        </div>
+        <div>
+          <h4>لینک‌ها</h4>
+          <ul>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="rules.html">قوانین</a></li>
+            <li><a href="contact.html">تماس</a></li>
+
+
+          </ul>
+        </div>
+        <div>
+          <h4>اشتراک</h4>
+          <p>برای دریافت جدیدترین محصولات و تخفیف‌ها ایمیل خود را وارد کنید.</p>
+          <form id="subscribe-form">
+            <input type="email" placeholder="ایمیل شما" required>
+            <button class="btn sm">اشتراک</button>
+          </form>
+        </div>
+      </div>
+      <p class="copyright">© 2025 بازار صنایع دستی</p>
+    </div>
+  </footer>
+
+</body>
+</html>
